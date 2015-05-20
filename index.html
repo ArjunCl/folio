@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+	<head>
+
+	<!-- always need this -->
+	<meta charset="utf-8">
+
+	<!-- always use this -->
+	<meta name="viewport" content="width=device-width">
+
+	<title>Folio - Photography Portfolio</title>
+	<meta name="description" content="A photographer in London who specialises in nature and scenery">
+
+	<!-- you pretty much always need this, it zeroes out all the default values provided by the user agent stylesheet and gives us a clean slate to work on. -->
+	<link rel="stylesheet" href="css/reset.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+
+	<body>
+
+	<!-- having an element with a class name of container or wrapper is common with websites that wrap all their content up. -->
+	<!-- we add the class of group to activate the 'clearfix' hack on the element. this forces the element to behave properly with the floated elements containes inside it, recognising their height -->
+	<div class="container group">
+
+		<header>
+		
+		<h1>
+			<img src="images/logo.png" alt="Photography Portfolio">
+		</h1>
+
+		<nav>
+			<a href="index.html">Portfolio</a>
+			<a href="profile.html">Profile</a>
+			<a href="blog.html">Blog</a>
+		</nav>
+
+		</header>
+
+		<section>
+			
+			<h2>
+				<img src="images/header.jpg" alt="Crashing Sea header">
+			</h2>
+
+			<!-- this is the structure we are going to use and repeat for each pgotography project -->
+			<a href="project1.html" class="project">
+				<img src="images/clouds.jpg">
+			</a>
+
+			<a href="project2.html" class="project alternate">
+				<img src="images/shore.jpg">
+			</a>
+
+			<a href="project3.html" class="project">
+				<img src="images/hillside.jpg">
+			</a>
+
+			<a href="project4.html" class="project alternate">
+				<img src="images/waves.jpg">
+			</a>
+
+			<a href="project5.html" class="project">
+				<img src="images/sea.jpg">
+			</a>
+
+			<a href="project6.html" class="project alternate">
+				<img src="images/mountain.jpg">
+			</a>
+
+			<a href="project7.html" class="project">
+				<img src="images/rocks.jpg">
+			</a>
+
+			<a href="project8.html" class="project alternate">
+				<img src="images/shadow.jpg">
+			</a>
+
+			<footer>
+				
+			<a href="https://twitter.com/foliophotos">
+				<img src="images/twitter.png">
+			</a>
+
+			<a href="https://dribbble.com/foliophotos">
+				<img src="images/dribbble.png">
+			</a>
+
+			<a href="https://instagram.com/foliophotos">
+				<img src="images/instagram.png">
+			</a>
+
+			<!-- &copy; (copyright symbol) is a html entity. We can embed symbols into our html without having to know the keyboard shortcuts for them, such as &amp; (ampersand) and &hearts; (hearts)-->
+			<p>All images &copy; Foliophotos 2015</p>
+
+			</footer>
+
+
+		</section>
+		
+
+	</div>
+
+	</body>
+
+</html>
