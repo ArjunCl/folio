@@ -1,0 +1,170 @@
+body{
+	background-color: #e0e0e0;
+
+	/*this is the long hand way of declaring fonts, there's nothing wrong with it, as it seperates font related
+	 properties out for us nicely.*/
+	font-family: Avenir, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	font-weight: 400;
+
+	/*this is a shortcut way to declare fonts on our page, the format goe: wight size/line-height font-stack*/
+	/*font: 400 14px/1.5 Avenir, Arial, sans-serif;*/
+}
+
+.container{
+	background-color: #fff;
+	max-width: 1110px;
+
+	/*centers the element*/
+	margin: 0 auto;
+
+	padding: 60px 80px 30px 80px;
+}
+
+header{
+	/*we use the float property to allow us to stack elements alongside each other. this causes unwanted behaviour in that the
+	container 'collapses' up the page because it can't determine the height of its children. this is where the 'clearfix' hack
+	comes into play, which forces the container to recognise the heights of its floates children.*/
+	float: left;
+	width: 190px;
+	margin-top: 300px;
+}
+
+section{
+	float: right;
+	width: 730px;
+}
+
+nav{
+margin-top: 40px;
+}
+
+nav a{
+	/*stack them on top of each other*/
+	display: block;
+	/*remove the underline*/
+	text-decoration: none;
+	/*make the text uppercase*/
+	text-transform: uppercase;
+	/*space the letters 2px apart*/
+	letter-spacing: 2px;
+	/*bottom margin of 10px*/
+	margin-bottom: 10px;
+	/*use the bold (700) font weight*/
+	font-weight: 700;
+	/*make the colour #141618*/
+	color: #141618;
+}
+
+nav a:hover{
+	color: #999;
+}
+
+h2{
+	/*it's best to add margins to push stuff down the page as opposed to up the page.*/
+	margin-bottom: 30px;
+}
+
+/*container is 730px wide*/
+/*project images are 350px wide*/
+
+.project{
+	float: left;
+
+	margin-bottom: 30px;
+}
+
+.alternate{
+	/*margin-left: 30px;*/
+
+	float: right;
+}
+
+footer{
+	/*looks for floated elements before it in the html and forces itself below them. this is the partner proroperty of 'float
+	(and is a core part of the clearfix hack)*/
+	clear: both;
+
+	color: #999;
+	font-size: 12px;
+
+	padding-top: 40px;
+}
+
+footer a{
+	text-decoration: none;
+	margin-right: 15px;
+}
+
+footer p{
+	margin: 15px 0;
+}
+
+/*  1. Flexible foundation (layout
+	2. flexible media (images etc.
+	3. media queries
+	4. meta viewport tag */
+
+img{
+	max-width: 100%;
+}
+
+/*this is a media query. it's a block of css code that only gets activated when the screen width (or height pixel density
+	etc.) conditions are met*/
+@media screen and (max-width: 1110px){
+	.container{
+		padding: 10px 10px 40px 10px;
+	}
+
+	/*kill off the floats*/
+	header, 
+	section{
+		float: none;
+		/*we need to override the width here becuase we set a static width earlier on. by default, elements have a width of
+		auto, so that's what we'll set it back to*/
+		width: auto;
+	}
+
+	header{
+		margin: 15px 0;
+		text-align: center;
+	}
+
+	nav a{
+		/*this is the oppsite of block and allows elements to display next to each other in a line (default behaviour
+			for an anchor tag)*/
+		display: inline-block;
+		font-size: 11px;
+		margin: 0 5px;
+		/*our links are now too small for a touchscreen device so we need to make them bigger. the recommended amount is
+		44x44px (from apple's human interface guidelines)*/
+
+		/*increasing th line height increases the touch target height of the link to 44px.*/
+		line-height: 44px;
+	}
+
+	h2 img{
+		width: 100%;
+	}
+
+	/*we're making our projects use a fluid width that is linked to the width of the parent container, they will shrink and
+	grow in proportion to it.
+
+	percentage widths are an essential part of responsive web design as they allow us to cater to an infinite array of
+	potential small screen sizes.
+
+	the margin on the bottom is equal to the gap between the projects.*/
+
+	.project {
+		width: 48%;
+		margin-bottom: 4%;
+	}
+	.project img {
+		width: 100%;
+	}
+
+	footer{
+		text-align: center;
+	}
+}
