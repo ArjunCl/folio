@@ -1,0 +1,7 @@
+Font - 
+Avenir, Arial, sans-serif
+
+Colors -
+Grey: #F0F0F0
+Light Grey: #999999 
+Off black: #141618
